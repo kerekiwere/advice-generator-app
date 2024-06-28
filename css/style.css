@@ -1,0 +1,93 @@
+@import url('reset.css');
+
+/* ========== VARIABLES ========== */
+:root {
+  /* Colors */
+  --clr-light-cyan: hsl(193, 38%, 86%);
+  --clr-neon-green: hsl(150, 100%, 66%);
+  --clr-grayish-blue: hsl(217, 19%, 38%);
+  --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+  --clr-dark-blue: hsl(218, 23%, 16%);
+  /* Typography */
+  --ff-primary: "Manrope", sans-serif;
+  --fs-300: 0.725rem;
+  --fs-400: 1.75rem;
+}
+
+@media (min-width: 768px) {}
+
+/* ========== GLOBAL ========== */
+body {
+  font-family: var(--ff-primary);
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-light-cyan);
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  font-size: var(--fs-300);
+  color: var(--clr-neon-green);
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  font-size: var(--fs-400);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+blockquote::before {
+  content: "“";
+}
+
+blockquote::after {
+  content: "”";
+}
+
+/* ========== UTILITIES ========== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.container {
+  max-width: 575px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ========== MAIN ========== */
+.generator {
+  background-color: var(--clr-dark-grayish-blue);
+  padding: 3rem 1.5rem 0 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.generator__image>img {
+  display: inline-block;
+}
+
+.generator__button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 1.25rem;
+  background-color: var(--clr-neon-green);
+  border: none;
+  border-radius: 50%;
+  translate: 0 50%;
+  transition: box-shadow 0.25s ease-out;
+}
+
+.generator__button:hover {
+  box-shadow: 0 0 25px 0px var(--clr-neon-green);
+}
